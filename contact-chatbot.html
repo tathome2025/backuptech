@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>联系 - Backup Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="site">
+    <header class="top">
+      <div class="brand"><div class="logo-box"><img src="./logo.jpeg" alt="Backup Tech Logo" /></div><span data-i18n-key="brand"></span></div>
+      <div class="top-right">
+        <div class="menu"><a href="./index.html" data-i18n-key="nav_home"></a> / <a href="./about.html" data-i18n-key="nav_about"></a> / <a href="./services.html" data-i18n-key="nav_services"></a> / <a href="./ai-solutions.html" data-i18n-key="nav_ai"></a> / <a href="./contact-chatbot.html" data-i18n-key="nav_contact"></a></div>
+        <div class="lang-toggle"><button class="lang-btn" type="button" data-lang-switch="zh">中文</button><button class="lang-btn" type="button" data-lang-switch="en">EN</button></div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1 data-i18n-key="hero_title"></h1>
+      <p data-i18n-key="hero_sub"></p>
+      <div class="btns">
+        <a class="btn primary" href="#form" data-i18n-key="hero_btn_1"></a>
+        <a class="btn secondary" href="./index.html" data-i18n-key="hero_btn_2"></a>
+      </div>
+    </section>
+
+    <section class="sec white">
+      <h2 data-i18n-key="chat_title"></h2>
+      <p class="sub" data-i18n-key="chat_sub"></p>
+      <div class="cards grid2">
+        <div class="card">
+          <h3 data-i18n-key="how_title"></h3>
+          <ul class="list"><li data-i18n-key="how_1"></li><li data-i18n-key="how_2"></li><li data-i18n-key="how_3"></li></ul>
+          <h3 style="margin-top:14px" data-i18n-key="suggest_title"></h3>
+          <div class="chips">
+            <button class="chip ask" data-q-zh="我们公司是做什么的？" data-q-en="What does your company do?" data-i18n-key="sug_1"></button>
+            <button class="chip ask" data-q-zh="你们提供哪些AI服务？" data-q-en="What AI services do you provide?" data-i18n-key="sug_2"></button>
+            <button class="chip ask" data-q-zh="AI影像处理有什么应用？" data-q-en="How can AI image processing help media production?" data-i18n-key="sug_3"></button>
+            <button class="chip ask" data-q-zh="你们是否提供定制AI开发？" data-q-en="Do you provide custom AI development?" data-i18n-key="sug_4"></button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n-key="live_title"></h3>
+          <div id="chatLog" class="chatbox"></div>
+          <div class="chat-input-row">
+            <textarea id="chatInput" class="textarea" data-i18n-placeholder="chat_placeholder"></textarea>
+            <button id="sendBtn" class="btn primary" type="button" data-i18n-key="send_btn"></button>
+          </div>
+          <div class="btns" style="margin-top:8px">
+            <button id="summarizeBtn" class="btn ghost" type="button" data-i18n-key="summary_btn"></button>
+            <button id="clearBtn" class="btn ghost" type="button" data-i18n-key="clear_btn"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="form">
+      <h2 data-i18n-key="form_title"></h2>
+      <p class="sub" data-i18n-key="form_sub"></p>
+      <form class="form-grid" onsubmit="event.preventDefault(); alert(window.currentLang === 'en' ? 'Demo form submitted.' : '已提交线框表单（Demo）。');">
+        <input class="input" name="name" data-i18n-placeholder="ph_name" required />
+        <input class="input" type="email" name="email" data-i18n-placeholder="ph_email" required />
+        <input class="input" name="company" data-i18n-placeholder="ph_company" />
+        <input class="input" name="phone" data-i18n-placeholder="ph_phone" />
+        <textarea id="messageField" class="textarea full" name="message" data-i18n-placeholder="ph_message"></textarea>
+        <button class="btn primary" type="submit" data-i18n-key="submit_btn"></button>
+      </form>
+    </section>
+  </div>
+
+  <script>
+    window.I18N = {
+      zh: {
+        __title:'联系 - Backup Tech', brand:'备影科技传媒管理有限公司<br>Backup Tech and Media Management Limited', nav_home:'首页', nav_about:'关于', nav_services:'服务', nav_ai:'AI方案', nav_contact:'联系', hero_title:'联系我们', hero_sub:'欢迎与备影科技团队联系。您可以通过 AI 助手快速了解我们的公司与服务，并整理咨询摘要提交给我们。', hero_btn_1:'提交咨询', hero_btn_2:'返回首页', chat_title:'AI聊天助手', chat_sub:'已预设 OpenAI 服务，访客可直接使用。支持建议问题、实时对话、自动摘要写入联系表单。', how_title:'使用说明', how_1:'可提问公司介绍、服务范围、AI方案与合作方式。', how_2:'点击建议问题可快速开始。', how_3:'使用「整合对话并发送给公司」自动生成咨询摘要。', suggest_title:'建议问题', sug_1:'了解公司', sug_2:'AI解决方案', sug_3:'媒体AI应用', sug_4:'联系我们', live_title:'实时对话', send_btn:'发送', summary_btn:'整合对话并发送给公司', clear_btn:'清空对话', form_title:'联系表单', form_sub:'留言 Message 可自动填入 AI 对话摘要。', submit_btn:'提交咨询', ph_name:'姓名 Name', ph_email:'邮箱 Email', ph_company:'公司 Company', ph_phone:'电话 Phone (Optional)', ph_message:'留言 Message（可自动填入AI总结摘要）', chat_ready:'AI助手已就绪。', chat_user:'用户', chat_ai:'AI助手', chat_sys:'系统', sending:'发送中...', empty_summary:'暂无对话可摘要。', summary_done:'已生成摘要并填入联系表单留言栏。', chat_cleared:'对话已清空。', chat_fail:'请求失败：', summary_fail:'摘要失败：', summary_prompt:'请将以下对话总结为给公司商务团队的咨询摘要，包含：客户需求、关注服务、预算/时间（如无则写未提供）、建议下一步。\n\n'
+      },
+      en: {
+        __title:'Contact - Backup Tech', brand:'Backup Tech and Media Management Limited<br>备影科技传媒管理有限公司', nav_home:'Home', nav_about:'About', nav_services:'Services', nav_ai:'AI Solutions', nav_contact:'Contact', hero_title:'Contact Us', hero_sub:'Reach out to the Backup Tech team. Use our AI assistant to quickly understand our company and services, then auto-generate an inquiry summary.', hero_btn_1:'Submit Inquiry', hero_btn_2:'Back to Home', chat_title:'AI Chatbot', chat_sub:'OpenAI is pre-configured on the server. Visitors can chat directly and generate inquiry summaries.', how_title:'How It Works', how_1:'Ask about company info, services, AI solutions, and collaboration.', how_2:'Use suggested questions to start quickly.', how_3:'Click summary to auto-fill the contact form message.', suggest_title:'Suggested Questions', sug_1:'About Company', sug_2:'AI Solutions', sug_3:'Media AI Use Cases', sug_4:'Contact Us', live_title:'Live Chat', send_btn:'Send', summary_btn:'Send this inquiry to the company', clear_btn:'Clear Chat', form_title:'Contact Form', form_sub:'The message field can be auto-filled with AI conversation summary.', submit_btn:'Submit Inquiry', ph_name:'Name', ph_email:'Email', ph_company:'Company', ph_phone:'Phone (Optional)', ph_message:'Message (can be auto-filled with AI summary)', chat_ready:'AI assistant is ready.', chat_user:'User', chat_ai:'AI Assistant', chat_sys:'System', sending:'Sending...', empty_summary:'No conversation to summarize.', summary_done:'Summary generated and inserted into message field.', chat_cleared:'Chat history cleared.', chat_fail:'Request failed: ', summary_fail:'Summary failed: ', summary_prompt:'Please summarize this conversation for the business team. Include: client needs, service interests, budget/timeline (write Not provided if absent), and recommended next steps.\n\n'
+      }
+    };
+  </script>
+  <script src="./i18n.js"></script>
+  <script>
+    const chatLog = document.getElementById('chatLog');
+    const chatInput = document.getElementById('chatInput');
+    const sendBtn = document.getElementById('sendBtn');
+    const summarizeBtn = document.getElementById('summarizeBtn');
+    const clearBtn = document.getElementById('clearBtn');
+    const messageField = document.getElementById('messageField');
+    const history = [];
+    window.currentLang = localStorage.getItem('site_lang') === 'en' ? 'en' : 'zh';
+
+    function t(key) {
+      const lang = window.currentLang || 'zh';
+      return (window.I18N[lang] && window.I18N[lang][key]) || window.I18N.zh[key] || key;
+    }
+
+    function append(role, content) {
+      const div = document.createElement('div');
+      div.className = 'msg';
+      div.innerHTML = `<strong>${role}</strong><br>${String(content).replace(/\n/g, '<br>')}`;
+      chatLog.appendChild(div);
+      chatLog.scrollTop = chatLog.scrollHeight;
+    }
+
+    async function callChatApi(input, mode = 'chat') {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ history, input, mode, lang: window.currentLang || 'zh' })
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data?.error || `API error ${response.status}`);
+      return data.output || '';
+    }
+
+    async function sendMessage(text) {
+      const userText = (text || chatInput.value).trim();
+      if (!userText) return;
+      append(t('chat_user'), userText);
+      history.push({ role: 'user', content: userText });
+      chatInput.value = '';
+      sendBtn.disabled = true;
+      sendBtn.textContent = t('sending');
+      try {
+        const reply = await callChatApi(userText, 'chat');
+        append(t('chat_ai'), reply);
+        history.push({ role: 'assistant', content: reply });
+      } catch (err) {
+        append(t('chat_sys'), `${t('chat_fail')}${err.message}`);
+      } finally {
+        sendBtn.disabled = false;
+        sendBtn.textContent = t('send_btn');
+      }
+    }
+
+    async function summarizeConversation() {
+      if (!history.length) {
+        append(t('chat_sys'), t('empty_summary'));
+        return;
+      }
+      const convo = history.map((m) => `${m.role === 'user' ? t('chat_user') : t('chat_ai')}: ${m.content}`).join('\n');
+      const prompt = t('summary_prompt') + convo;
+      summarizeBtn.disabled = true;
+      sendBtn.disabled = true;
+      try {
+        const summary = await callChatApi(prompt, 'summary');
+        messageField.value = summary;
+        append(t('chat_sys'), t('summary_done'));
+      } catch (err) {
+        append(t('chat_sys'), `${t('summary_fail')}${err.message}`);
+      } finally {
+        summarizeBtn.disabled = false;
+        sendBtn.disabled = false;
+      }
+    }
+
+    sendBtn.addEventListener('click', () => sendMessage());
+    chatInput.addEventListener('keydown', (e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); } });
+
+    document.querySelectorAll('.ask').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const q = window.currentLang === 'en' ? btn.dataset.qEn : btn.dataset.qZh;
+        sendMessage(q || '');
+      });
+    });
+
+    clearBtn.addEventListener('click', () => {
+      history.length = 0;
+      chatLog.innerHTML = '';
+      append(t('chat_sys'), t('chat_cleared'));
+    });
+
+    summarizeBtn.addEventListener('click', summarizeConversation);
+
+    window.onLanguageChange = function (lang) {
+      window.currentLang = lang === 'en' ? 'en' : 'zh';
+      if (!sendBtn.disabled) sendBtn.textContent = t('send_btn');
+    };
+
+    append(t('chat_sys'), t('chat_ready'));
+  </script>
+</body>
+</html>

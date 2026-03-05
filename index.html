@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>首页 - Backup Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="site">
+    <header class="top">
+      <div class="brand"><div class="logo-box"><img src="./logo.jpeg" alt="Backup Tech Logo" /></div><span data-i18n-key="brand"></span></div>
+      <div class="top-right">
+        <div class="menu">
+          <a href="./index.html" data-i18n-key="nav_home"></a> /
+          <a href="./about.html" data-i18n-key="nav_about"></a> /
+          <a href="./services.html" data-i18n-key="nav_services"></a> /
+          <a href="./ai-solutions.html" data-i18n-key="nav_ai"></a> /
+          <a href="./contact-chatbot.html" data-i18n-key="nav_contact"></a>
+        </div>
+        <div class="lang-toggle">
+          <button class="lang-btn" type="button" data-lang-switch="zh">中文</button>
+          <button class="lang-btn" type="button" data-lang-switch="en">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1 data-i18n-key="hero_title"></h1>
+      <p data-i18n-key="hero_sub"></p>
+      <div class="btns">
+        <a class="btn primary" href="./about.html" data-i18n-key="hero_btn_1"></a>
+        <a class="btn secondary" href="./contact-chatbot.html" data-i18n-key="hero_btn_2"></a>
+      </div>
+    </section>
+
+    <section class="sec white">
+      <h2 data-i18n-key="about_title"></h2>
+      <p class="sub" data-i18n-key="about_text"></p>
+    </section>
+
+    <section class="sec">
+      <h2 data-i18n-key="services_title"></h2>
+      <div class="cards">
+        <div class="card"><h3 data-i18n-key="svc_1_t"></h3><p data-i18n-key="svc_1_d"></p></div>
+        <div class="card"><h3 data-i18n-key="svc_2_t"></h3><p data-i18n-key="svc_2_d"></p></div>
+        <div class="card"><h3 data-i18n-key="svc_3_t"></h3><p data-i18n-key="svc_3_d"></p></div>
+      </div>
+    </section>
+
+    <section class="sec white">
+      <h2 data-i18n-key="ai_title"></h2>
+      <div class="chips">
+        <span class="chip" data-i18n-key="ai_chip_1"></span>
+        <span class="chip" data-i18n-key="ai_chip_2"></span>
+        <span class="chip" data-i18n-key="ai_chip_3"></span>
+        <span class="chip" data-i18n-key="ai_chip_4"></span>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2 data-i18n-key="industry_title"></h2>
+      <p class="sub" data-i18n-key="industry_text"></p>
+    </section>
+
+    <section class="cta">
+      <h3 data-i18n-key="cta_title"></h3>
+      <a class="btn primary" href="./contact-chatbot.html" data-i18n-key="cta_btn"></a>
+    </section>
+  </div>
+
+  <script>
+    window.I18N = {
+      zh: {
+        __title: '首页 - Backup Tech',
+        brand: '备影科技传媒管理有限公司<br>Backup Tech and Media Management Limited',
+        nav_home: '首页', nav_about: '关于', nav_services: '服务', nav_ai: 'AI方案', nav_contact: '联系',
+        hero_title: '人工智能影像科技解决方案',
+        hero_sub: '以人工智能技术赋能媒体制作产业',
+        hero_btn_1: '了解更多', hero_btn_2: '联系我们',
+        about_title: '关于备影科技',
+        about_text: '深圳市备影科技传媒管理有限公司专注于人工智能影像科技与媒体管理应用，融合香港国际媒体制作经验与深圳AI技术资源，为全球影像产业提供智能化解决方案。',
+        services_title: '核心服务',
+        svc_1_t: '数字影像档案管理', svc_1_d: 'AI自动分类、智能标签、语义搜索与云端协作。',
+        svc_2_t: '人工智能影像处理', svc_2_d: '自动修图、影像优化、风格转换与背景处理。',
+        svc_3_t: '人工智能视频应用', svc_3_d: '剪辑辅助、自动字幕、内容分析与视频摘要。',
+        ai_title: 'AI解决方案',
+        ai_chip_1: 'AI媒体工作流程', ai_chip_2: 'AI影像资产系统', ai_chip_3: 'AI内容生成', ai_chip_4: 'AI媒体分析',
+        industry_title: '行业应用',
+        industry_text: '面向媒体制作公司、广告机构、影视团队、数字创作者与AI技术伙伴，协助传统影像行业智能化转型。',
+        cta_title: '与我们合作', cta_btn: '联系我们'
+      },
+      en: {
+        __title: 'Home - Backup Tech',
+        brand: 'Backup Tech and Media Management Limited<br>备影科技传媒管理有限公司',
+        nav_home: 'Home', nav_about: 'About', nav_services: 'Services', nav_ai: 'AI Solutions', nav_contact: 'Contact',
+        hero_title: 'AI-Powered Visual Media Technology',
+        hero_sub: 'Empowering the media production industry with AI technology.',
+        hero_btn_1: 'Learn More', hero_btn_2: 'Contact Us',
+        about_title: 'About Backup Tech',
+        about_text: 'Backup Tech and Media Management Limited focuses on AI visual media technology and media workflow innovation, combining Hong Kong production expertise with Shenzhen AI resources for global media teams.',
+        services_title: 'Our Services',
+        svc_1_t: 'Digital Media Asset Management', svc_1_d: 'AI auto-tagging, semantic search, and cloud collaboration.',
+        svc_2_t: 'AI Image Processing', svc_2_d: 'Automatic retouching, enhancement, style transfer, and background processing.',
+        svc_3_t: 'AI Video Applications', svc_3_d: 'Editing assistance, auto subtitles, content analysis, and summaries.',
+        ai_title: 'AI Solutions',
+        ai_chip_1: 'AI Media Workflow', ai_chip_2: 'AI Asset Intelligence', ai_chip_3: 'AI Content Generation', ai_chip_4: 'AI Media Analysis',
+        industry_title: 'Industry Applications',
+        industry_text: 'Serving media production houses, advertising agencies, film studios, digital creators, and AI technology partners.',
+        cta_title: 'Work With Us', cta_btn: 'Contact Us'
+      }
+    };
+  </script>
+  <script src="./i18n.js"></script>
+</body>
+</html>

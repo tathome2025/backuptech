@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>关于 - Backup Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="site">
+    <header class="top">
+      <div class="brand"><div class="logo-box"><img src="./logo.jpeg" alt="Backup Tech Logo" /></div><span data-i18n-key="brand"></span></div>
+      <div class="top-right">
+        <div class="menu">
+          <a href="./index.html" data-i18n-key="nav_home"></a> /
+          <a href="./about.html" data-i18n-key="nav_about"></a> /
+          <a href="./services.html" data-i18n-key="nav_services"></a> /
+          <a href="./ai-solutions.html" data-i18n-key="nav_ai"></a> /
+          <a href="./contact-chatbot.html" data-i18n-key="nav_contact"></a>
+        </div>
+        <div class="lang-toggle"><button class="lang-btn" type="button" data-lang-switch="zh">中文</button><button class="lang-btn" type="button" data-lang-switch="en">EN</button></div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1 data-i18n-key="hero_title"></h1>
+      <p data-i18n-key="hero_sub"></p>
+      <div class="btns">
+        <a class="btn primary" href="./services.html" data-i18n-key="hero_btn_1"></a>
+        <a class="btn secondary" href="./contact-chatbot.html" data-i18n-key="hero_btn_2"></a>
+      </div>
+    </section>
+
+    <section class="sec white"><h2 data-i18n-key="overview_title"></h2><p class="sub" data-i18n-key="overview_text"></p></section>
+    <section class="sec"><h2 data-i18n-key="vision_title"></h2><p class="sub" data-i18n-key="vision_text"></p></section>
+    <section class="sec white"><h2 data-i18n-key="mission_title"></h2><p class="sub" data-i18n-key="mission_text"></p></section>
+
+    <section class="sec">
+      <h2 data-i18n-key="team_title"></h2>
+      <div class="cards grid2">
+        <div class="card">
+          <h3 data-i18n-key="ceo_title"></h3>
+          <p data-i18n-key="ceo_desc"></p>
+          <ul class="list">
+            <li data-i18n-key="ceo_l1"></li><li data-i18n-key="ceo_l2"></li><li data-i18n-key="ceo_l3"></li><li data-i18n-key="ceo_l4"></li><li data-i18n-key="ceo_l5"></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 data-i18n-key="coo_title"></h3>
+          <p data-i18n-key="coo_desc"></p>
+          <ul class="list">
+            <li data-i18n-key="coo_l1"></li><li data-i18n-key="coo_l2"></li><li data-i18n-key="coo_l3"></li><li data-i18n-key="coo_l4"></li><li data-i18n-key="coo_l5"></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    window.I18N = {
+      zh: {
+        __title: '关于 - Backup Tech',
+        brand: '备影科技传媒管理有限公司<br>Backup Tech and Media Management Limited',
+        nav_home: '首页', nav_about: '关于', nav_services: '服务', nav_ai: 'AI方案', nav_contact: '联系',
+        hero_title: '公司简介', hero_sub: '连接人工智能科技与影像创作产业，推动全球媒体制作流程智能化升级。', hero_btn_1: '查看服务', hero_btn_2: '联系团队',
+        overview_title: '公司简介', overview_text: '备影科技专注于人工智能影像科技与媒体管理应用，融合香港国际媒体制作经验与深圳AI资源，为影像制作与媒体管理提供系统化解决方案。',
+        vision_title: '公司愿景', vision_text: '成为连接人工智能科技与影像创作产业的桥梁，把中国领先AI技术应用于全球媒体产业。',
+        mission_title: '公司使命', mission_text: '协助传统影像制作行业顺利转型，提升效率、降低成本，并创造更多创新与商业可能。',
+        team_title: '管理团队',
+        ceo_title: '行政总裁 邱伟航', ceo_desc: '英国 Wrexham University 计算机学系 BSc (Hons) Computing，拥有15年以上香港广告及纪录片制作经验。',
+        ceo_l1: '广告及品牌影片导演', ceo_l2: '影像制作流程设计', ceo_l3: 'AI影像应用开发', ceo_l4: '数字影像资产管理系统', ceo_l5: '媒体科技创新',
+        coo_title: '营运长 郭镇华', coo_desc: '拥有20年以上香港摄影行业经验，具媒体及新闻机构背景，并创立摄影品牌 GalleryC。',
+        coo_l1: '专业摄影与影像创作', coo_l2: '媒体内容制作管理', coo_l3: '摄影师团队管理', coo_l4: '品牌视觉内容策划', coo_l5: '影像项目运营管理'
+      },
+      en: {
+        __title: 'About - Backup Tech',
+        brand: 'Backup Tech and Media Management Limited<br>备影科技传媒管理有限公司',
+        nav_home: 'Home', nav_about: 'About', nav_services: 'Services', nav_ai: 'AI Solutions', nav_contact: 'Contact',
+        hero_title: 'Company Overview', hero_sub: 'Bridging AI technology and visual media creation for intelligent production workflows.', hero_btn_1: 'Explore Services', hero_btn_2: 'Contact Team',
+        overview_title: 'Company Overview', overview_text: 'Backup Tech focuses on AI visual media technology and media management, integrating Hong Kong production expertise with Shenzhen AI resources to deliver systematic solutions.',
+        vision_title: 'Vision', vision_text: 'To become the bridge between AI technology and the visual media industry worldwide.',
+        mission_title: 'Mission', mission_text: 'Help traditional media teams transform, improve efficiency, reduce costs, and unlock new business opportunities.',
+        team_title: 'Management Team',
+        ceo_title: 'CEO Tarrison Yau', ceo_desc: 'BSc (Hons) Computing from Wrexham University, with 15+ years of experience in Hong Kong advertising and documentary production.',
+        ceo_l1: 'Commercial and brand film direction', ceo_l2: 'Production workflow design', ceo_l3: 'AI visual application development', ceo_l4: 'Digital asset management systems', ceo_l5: 'Media technology innovation',
+        coo_title: 'COO Billy Kwok', coo_desc: '20+ years in the Hong Kong photography industry, with media/news background and founder of GalleryC.',
+        coo_l1: 'Professional photography and visual creation', coo_l2: 'Media content production management', coo_l3: 'Photographer team management', coo_l4: 'Brand visual content planning', coo_l5: 'Project operations management'
+      }
+    };
+  </script>
+  <script src="./i18n.js"></script>
+</body>
+</html>
