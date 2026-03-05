@@ -23,6 +23,9 @@ export default async function handler(req, res) {
     const body = req.body || {};
     const lang = sanitize(body.lang) === 'en' ? 'en' : 'zh';
     const source = sanitize(body.source) || 'contact_form';
+    if (source !== 'contact_form') {
+      return res.status(400).json({ error: 'Only contact_form submission can send email.' });
+    }
     const name = sanitize(body.name);
     const email = sanitize(body.email);
     const company = sanitize(body.company);
