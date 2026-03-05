@@ -226,6 +226,16 @@ a {
   line-height: 1.55;
 }
 
+.card-media {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-top: 10px;
+  border: 1px solid #dbe3ef;
+  border-radius: 8px;
+}
+
 .list {
   margin: 8px 0 0;
   padding-left: 14px;
