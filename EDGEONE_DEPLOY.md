@@ -14,8 +14,8 @@ Recommended EdgeOne Pages settings:
 
 Required environment variables:
 
-- `OPENAI_API_KEY`
-- `OPENAI_MODEL` (optional)
+- `DEEPSEEK_API_KEY`
+- `DEEPSEEK_MODEL` (optional)
 - `RESEND_API_KEY`
 - `INQUIRY_FROM_EMAIL`
 

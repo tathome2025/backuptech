@@ -19,9 +19,9 @@ Target users: Media production companies, advertising agencies, film studios, di
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
 
-  const apiKey = process.env.OPENAI_API_KEY;
-  const model = process.env.OPENAI_MODEL || 'gpt-4o-mini';
-  if (!apiKey) return res.status(500).json({ error: 'Missing OPENAI_API_KEY on server.' });
+  const apiKey = process.env.DEEPSEEK_API_KEY;
+  const model = process.env.DEEPSEEK_MODEL || 'deepseek-chat';
+  if (!apiKey) return res.status(500).json({ error: 'Missing DEEPSEEK_API_KEY on server.' });
 
   try {
     const { history = [], input = '', mode = 'chat', lang = 'zh' } = req.body || {};
@@ -38,14 +38,14 @@ export default async function handler(req, res) {
 
     const messages = [{ role: 'system', content: systemPrompt }, ...history, { role: 'user', content: input }];
 
-    const openaiRes = await fetch('https://api.openai.com/v1/chat/completions', {
+    const deepseekRes = await fetch('https://api.deepseek.com/chat/completions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
       body: JSON.stringify({ model, temperature: 0.3, messages })
     });
 
-    const data = await openaiRes.json();
-    if (!openaiRes.ok) return res.status(openaiRes.status).json({ error: data?.error?.message || 'OpenAI request failed.' });
+    const data = await deepseekRes.json();
+    if (!deepseekRes.ok) return res.status(deepseekRes.status).json({ error: data?.error?.message || 'DeepSeek request failed.' });
 
     return res.status(200).json({ output: data?.choices?.[0]?.message?.content || '' });
   } catch (err) {

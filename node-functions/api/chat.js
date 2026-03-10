@@ -44,11 +44,11 @@ export default async function onRequest(context) {
     return json({ error: "Method Not Allowed" }, 405);
   }
 
-  const apiKey = env.OPENAI_API_KEY;
-  const model = env.OPENAI_MODEL || "gpt-4o-mini";
+  const apiKey = env.DEEPSEEK_API_KEY;
+  const model = env.DEEPSEEK_MODEL || "deepseek-chat";
 
   if (!apiKey) {
-    return json({ error: "Missing OPENAI_API_KEY on server." }, 500);
+    return json({ error: "Missing DEEPSEEK_API_KEY on server." }, 500);
   }
 
   try {
@@ -84,7 +84,7 @@ export default async function onRequest(context) {
       { role: "user", content: input },
     ];
 
-    const openaiRes = await fetch("https://api.openai.com/v1/chat/completions", {
+    const deepseekRes = await fetch("https://api.deepseek.com/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -93,11 +93,11 @@ export default async function onRequest(context) {
       body: JSON.stringify({ model, temperature: 0.3, messages }),
     });
 
-    const data = await openaiRes.json().catch(() => null);
-    if (!openaiRes.ok) {
+    const data = await deepseekRes.json().catch(() => null);
+    if (!deepseekRes.ok) {
       return json(
-        { error: data?.error?.message || "OpenAI request failed." },
-        openaiRes.status
+        { error: data?.error?.message || "DeepSeek request failed." },
+        deepseekRes.status
       );
     }
 
